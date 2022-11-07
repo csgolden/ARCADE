@@ -1,3 +1,4 @@
+int collision = yDir = 1-1;
 int xPos = 250;
 int xDir = 1;
 int yPos = 250;
@@ -17,25 +18,25 @@ void draw() {
   if (key == CODED) {
     if (keyCode == UP) {
       yPos = yPos-yDir;
-      if (yPos>height-20 || yPos<20) {
-        yDir = -yDir;
+      if (yPos>height-25 || yPos<25) {
+        yPos = 25 ;
       }
     } else if (keyCode == DOWN) {
       yPos = yPos+yDir;
-      if (yPos>height+20 || yPos<20) {
-        yDir = -yDir;
+      if (yPos>height-25 || yPos<25) {
+        yPos = 475;
       }
     } else if (keyCode == LEFT) {
       xPos = xPos-xDir;
-      if (xPos>width-20 || xPos<20)
+      if (xPos>width-25 || xPos<25)
       {
-        xDir = -xDir;
+        xPos = 25;
       }
     } else if (keyCode == RIGHT) {
       xPos = xPos+xDir;
-      if (xPos>width+20 || xPos<20)
+      if (xPos>width-25 || xPos<25)
       {
-        xDir = -xDir;
+        xPos = 475;
       }
     }
   }
