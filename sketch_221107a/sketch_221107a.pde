@@ -1,4 +1,3 @@
-int collision = yDir = 1-1;
 int xPos = 250;
 int xDir = 1;
 int yPos = 250;
@@ -14,7 +13,16 @@ void setup() {
 
 void draw() {
   background(0);
+ fill(255);
   ellipse(xPos, yPos, 50, 50);
+  fill(125,100,100);
+  rect(380,380,20,20);
+  
+  if(xPos > 380 && xPos<380+20 || yPos>380 && yPos<380+20) {
+ fill(255);
+  rect(380,380,20,20);
+  }
+  
   if (key == CODED) {
     if (keyCode == UP) {
       yPos = yPos-yDir;
