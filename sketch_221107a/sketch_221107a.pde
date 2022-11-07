@@ -2,6 +2,8 @@ int xPos = 250;
 int xDir = 1;
 int yPos = 250;
 int yDir = 1;
+int x = mouseX;
+int y = mouseY;
 
 void setup() {
   size(500, 500);
@@ -15,13 +17,18 @@ void draw() {
   background(0);
  fill(255);
   ellipse(xPos, yPos, 50, 50);
-  fill(125,100,100);
-  rect(380,380,20,20);
+ 
   
-  if(xPos > 380 && xPos<380+20 || yPos>380 && yPos<380+20) {
- fill(255);
-  rect(380,380,20,20);
-  }
+ if(xPos > 380 && xPos < 380+50 && yPos > 380 && yPos < 380+50 == true) { 
+
+    
+ }else{
+ 
+ fill(125,100,100);
+  rect(380,380,50,50);
+ }
+
+ 
   
   if (key == CODED) {
     if (keyCode == UP) {
@@ -48,4 +55,8 @@ void draw() {
       }
     }
   }
+}
+void mousePressed() {
+println(mouseX + " : " + mouseY);
+
 }
