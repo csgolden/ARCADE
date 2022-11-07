@@ -19,13 +19,13 @@ void draw() {
   ellipse(xPos, yPos, 50, 50);
  
   
- if(xPos > 380 && xPos < 380+50 && yPos > 380 && yPos < 380+50 == true) { 
+ if(xPos > 365 && xPos < 365+50 && yPos > 365 && yPos < 365+50 == true) { 
 
     
  }else{
  
  fill(125,100,100);
-  rect(380,380,50,50);
+  rect(380,380,20,20);
  }
 
  
